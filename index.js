@@ -1,3 +1,20 @@
+
+// //jslint esversion:6
+// const express = require("express");
+// const app = express();
+//
+// app.listen(4000, function() {
+//   console.log("Server started on port 4000.");
+// });
+//
+// app.get("/", function(req,res) {
+//   res.sendFile(__dirname + "/index.html");
+// });
+//
+// app.get("/", function(req,res) {
+//   res.sendFile(__dirname + "/styles.css");
+// });
+
 gsap.registerPlugin(ScrollTrigger);
 
 var tl = gsap.timeline();
@@ -31,20 +48,20 @@ $(".row").hover(function() {
 var position = 10000;
 var navHeight = -1 * parseInt($(".navbar").css("height")) - 20;
 
-// $(window).on("scroll", function() {
-//   var curPosition = $(window).scrollTop();
-//   // if (curPosition >  parseInt($(window).height())) {
-//     if (position < curPosition && curPosition > 0) {
-//       gsap.to(".navbar", {
-//         y: navHeight,
-//         duration: 1.3
-//       });
-//     } else {
-//       gsap.to(".navbar", {
-//         y: 0,
-//         duration: 1
-//       });
-//     }
-//     position = curPosition;
-//   //}
-// });
+$(window).on("scroll", function() {
+  var curPosition = $(window).scrollTop();
+  // if (curPosition >  parseInt($(window).height())) {
+    if (position < curPosition && curPosition > 0) {
+      gsap.to(".navbar", {
+        y: navHeight,
+        duration: 1.3
+      });
+    } else {
+      gsap.to(".navbar", {
+        y: 0,
+        duration: 1
+      });
+    }
+    position = curPosition;
+  //}
+});
