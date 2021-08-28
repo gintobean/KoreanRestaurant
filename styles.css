@@ -8,11 +8,13 @@ body {
 .wrapper {
   width: 100%;
   height: 100vh;
+  min-height: 771px;
   position: absolute;
   z-index: -100;
 }
 
 .half-wrapper {
+  min-height: 771px;
   height: 100vh;
   width: 55%;
 }
@@ -94,17 +96,13 @@ body {
 
 /* top  */
 #top {
-  min-height: 771px;
+  min-height: 1000px;
   font-family: 'Sen', sans-serif;
   overflow: hidden;
 }
 
 .bg {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.7;
+  min-height: 1000px;
 }
 
 .title-content {
@@ -143,18 +141,12 @@ body {
 
 .about-description {
   width: 45%;
-  min-width: 500px;
+
 }
 
 .words {
   height: 100vh;
   padding: 25% 15%;
-}
-
-.bg2 {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 /* info  */
@@ -171,18 +163,11 @@ body {
 
 .info-description {
   width: 45%;
-  min-width: 500px;
 }
 
 .words2 {
   height: 100vh;
   padding: 25% 15%;
-}
-
-.bg3 {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 /* parallax1 */
@@ -192,18 +177,12 @@ body {
   min-height: 771px;
 }
 
-.bg4 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .overlay1 {
   background-color: black;
   opacity: 0.6;
   height: 100vh;
+  min-width: 50vw;
   min-height: 771px;
-  min-width: 500px;
   width: 50%;
   position: absolute;
   z-index: -50;
@@ -212,7 +191,7 @@ body {
 .words3 {
   height: 100vh;
   min-height: 771px;
-  min-width: 500px;
+  min-width: 50vw;
   width: 50%;
   padding: 10% 7%;
 }
@@ -220,6 +199,7 @@ body {
 /* gallery */
 #gallery {
   text-align: center;
+  min-height: 771px;
 }
 
 .gallery-title {
@@ -251,29 +231,22 @@ body {
   min-height: 771px;
 }
 
-.bg5 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .overlay2 {
-  left: 50vw;
   background-color: black;
   opacity: 0.6;
   height: 100vh;
-  min-width: 500px;
+  min-width: 50vw;
   min-height: 771px;
   width: 50%;
-  position: relative;
+  position: absolute;
   z-index: -50;
 }
 
 .words4 {
-  float:right;
   height: 100vh;
   min-height: 771px;
   width: 50%;
+  min-width: 50vw;
   padding: 10% 7%;
 }
 
@@ -282,13 +255,6 @@ body {
   text-align: center;
   min-height: 771px;
   max-height: 900px;
-}
-
-.bg6 {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
 }
 
 .contact-content {
@@ -351,21 +317,38 @@ body {
 
   .about-description, .info-description {
     width: 100%;
+    margin: 10% 0;
+    min-height: 771px;
+    border: 4px solid #eee;
   }
 
   .half-wrapper {
     width: 100%;
     margin: 0;
+    min-height: 771px;
   }
 
-  .overlay2{
+  .overlay2, .overlay1{
+    width: 100vw;
     left: 0%;
   }
 
+  .parallax2-content, .parallax1-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .words3 {
+    text-align: center;
+    width: 80%;
+    position: relative;
+    top: 27.5vh;
+  }
   .words4 {
-    width: 60%;
+    top: 25vh;
+    text-align: center;
+    width: 80%;
+    position: relative;
     float: none;
-    position: absolute;
-    min-width: 500px;
   }
 }
